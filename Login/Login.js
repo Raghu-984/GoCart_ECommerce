@@ -64,8 +64,15 @@ document.getElementById("loginContainer").addEventListener("submit", function (e
     let email = document.getElementById("email").value.trim();
     let password = document.getElementById("password").value;
 
-    let users = JSON.parse(localStorage.getItem("users")) || [];
+    let users = JSON.parse(localStorage.getItem("users"));
 
+    // 🟢 Case 1: No user registered
+    if (!users || users.length === 0) {
+        alert("No account found. Please register first.");
+        return;
+    }
+
+    // 🟢 Case 2: Check valid credentials
     let validUser = users.find(user =>
         user.email === email && user.password === password
     );
@@ -74,9 +81,9 @@ document.getElementById("loginContainer").addEventListener("submit", function (e
         localStorage.setItem("isLoggedIn", "true");
         localStorage.setItem("currentUser", JSON.stringify(validUser));
 
-        alert("Login successful");
+        alert("Login successful!");
         window.location.href = "../Home/Home.html";
     } else {
-        alert("Invalid email or password");
+        alert("Invalid email or password.");
     }
 });
