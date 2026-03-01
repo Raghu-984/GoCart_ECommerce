@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Page</title>
+    <link rel="stylesheet" href="./Registration.css">
+</head>
+<body>
+        <div id="registration">
+            <form id="formContainer">
+                <h2>Create a Account</h2>
+                <div class="form">
+                    <label for="">Name: </label>
+                    <input type="text" placeholder="username" id="name">
+                </div>
+                <div class="form">
+                    <label for="">email: </label>
+                    <input type="email" placeholder="abcd12@gmail.com" id="email" required>
+                    <small id="errorMail" class="error"></small>
+                </div>
+                <div class="form">
+                    <label for="">Password</label>
+                    <input type="password" id="password" required> 
+                </div>
+                <div class="form">
+                    <label for="">Mobile</label>
+                    <input type="tel" id="mobile">
+                </div>
+                <div class="form">
+                    <button type="submit">Register</button>
+                </div>
+                <p>if you already registered!<a href="../Login/Login.html"> Login?</a></p>
+            </form>
+        </div>
+
+
+    <script src="./Registration.js"></script>
+</body>
+</html>

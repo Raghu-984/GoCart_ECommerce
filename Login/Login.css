@@ -1,0 +1,67 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#loginPage{
+    /* border: solid; */
+    width: 350px;
+    height: 400px;
+    padding: 30px;
+    margin:150px auto;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+#loginContainer{
+    /* border: solid; */
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* align-items: center; */
+}
+h1{
+    text-align: center;
+    font-family: sans-serif;
+}
+#mail1{
+    display: flex;
+    flex-direction: column;
+    font-size: 1.2rem;
+}
+#mail1 input{
+    width: 100%;
+    height: 35px;
+}
+#pass{
+    display: flex;
+    flex-direction: column;
+}
+#pass input{
+    width: 100%;
+    height: 35px;
+}
+button{
+    margin-left: 5%;
+    height: 30px;
+    width: 90%;
+    border-radius: 8px;
+    background-color:rgba(0, 0, 255, 0.785);
+    color: white;
+    font-weight: 600;
+    border: none;
+}
+#loginContainer p{
+    text-align: center;
+}
+#loginContainer a{
+    color: rgba(255, 72, 0, 0.737);
+    text-decoration: none;
+    font-family: sans-serif;
+    font-weight: 600;
+}
+
+#loginContainer a:hover{
+    text-decoration:underline;
+}

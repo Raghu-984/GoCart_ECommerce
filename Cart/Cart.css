@@ -1,0 +1,89 @@
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#cartcontainer{
+    position: relative;
+}
+#empty{
+    /* background:url(https://static.vecteezy.com/system/resources/previews/014/471/815/original/shopping-cart-business-icon-flat-cartoon-for-the-business-idea-web-design-illustration-free-vector.jpg); */
+    margin:auto;
+    height: 600px;
+    width: 800px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+}
+#btn{
+    height: 40px;
+    width: 200px;
+    background-color: blue;
+    margin: auto;
+}
+#cartContent .prod-info{
+    height: 200px;
+    width: 80%;
+    margin: 20px auto 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.153) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+#cartContent .prod-info #img{
+    width: 20%;
+    height: 100%;
+    text-align: center;
+}
+#img img{
+    width: 100%;
+    height: 200px;
+    background-position: center;
+    object-fit: contain;
+}
+#cartContent .prod-info #itemDetails{
+    height: 100%;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+}
+#cartContent .prod-info #itemDetails h3>i{
+    color:olive;
+    font-size: 2rem;
+}
+#cartContent .prod-info #itemDetails h3{
+    color: rgb(233, 35, 35);
+    font-size: 2rem;
+}
+#cartContent .prod-info #itemDetails #price{
+    width: fit-content;
+    padding: 4px 8px;
+    background-color: burlywood;
+    border-radius: 5px;
+}
+#cartContent .prod-info #itemDetails h2>i{
+    color: rgb(239, 39, 39);
+}
+#cartContent button{
+    padding: 10px 22px;
+    border: none;
+    background-color: red;
+    margin-right: 10px;
+    color: white;
+    font-weight: 600;
+    font-size: 18px;
+    border-radius: 5px;
+}
+#totalPrice{
+
+    position: absolute;
+    right: 50px;
+    bottom: -50px;
+    
+}
