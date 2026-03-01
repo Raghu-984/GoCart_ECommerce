@@ -69,6 +69,7 @@ document.getElementById("loginContainer").addEventListener("submit", function (e
     // 🟢 Case 1: No user registered
     if (!users || users.length === 0) {
         alert("No account found. Please register first.");
+        window.location.href="../Registration/Registration.html"
         return;
     }
 
