@@ -35,28 +35,48 @@ document.getElementById("loginContainer").addEventListener("submit", function da
 
 
 
+// document.getElementById("loginContainer").addEventListener("submit", function (e) {
+//     e.preventDefault(); // avoid reload
+
+//     let email = document.getElementById("email").value.trim();
+//     let password = document.getElementById("password").value;
+
+//     // Validate credentials
+//     let users = JSON.parse(localStorage.getItem("users")) || [];
+//     let validUser = users.find(user => 
+//         user.email === email && user.password === password
+//     );
+    
+//     if (validUser) {
+//         localStorage.setItem("isLoggedIn", "true");
+//         localStorage.setItem("currentUser", JSON.stringify(validUser));
+//         alert("Login successful");
+//         window.location.href = "../Home/Home.html";
+//     } else {
+//         alert("Invalid credentials");
+//     }
+// });
+
+
 document.getElementById("loginContainer").addEventListener("submit", function (e) {
-    e.preventDefault(); // avoid reload
+    e.preventDefault();
 
     let email = document.getElementById("email").value.trim();
     let password = document.getElementById("password").value;
 
-    // Validate credentials
     let users = JSON.parse(localStorage.getItem("users")) || [];
-    if (!users) {
-        alert("Please register first");
-        return;
-    }
-    let validUser = users.find(user => 
+
+    let validUser = users.find(user =>
         user.email === email && user.password === password
     );
-    
+
     if (validUser) {
         localStorage.setItem("isLoggedIn", "true");
         localStorage.setItem("currentUser", JSON.stringify(validUser));
+
         alert("Login successful");
         window.location.href = "../Home/Home.html";
     } else {
-        alert("Invalid credentials");
+        alert("Invalid email or password");
     }
 });
