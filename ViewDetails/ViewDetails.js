@@ -37,14 +37,14 @@ document.addEventListener("DOMContentLoaded", () => {
     let productId      = localStorage.getItem("productId");
 
     if (!allproducts || !productId) {
-        productDetails.innerHTML = `<p class="not-found">⚠️ Product not found. <a href="Home/Home.html">Go back to Home</a></p>`;
+        productDetails.innerHTML = `<p class="not-found">⚠️ Product not found. <a href="../Home/Home.html">Go back to Home</a></p>`;
         return;
     }
 
     let selectedProduct = allproducts.find(v => v.id == productId);
 
     if (!selectedProduct) {
-        productDetails.innerHTML = `<p class="not-found">⚠️ Product not found. <a href="Home/Home.html">Go back to Home</a></p>`;
+        productDetails.innerHTML = `<p class="not-found">⚠️ Product not found. <a href="../Home/Home.html">Go back to Home</a></p>`;
         return;
     }
 

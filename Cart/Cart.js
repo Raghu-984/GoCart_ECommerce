@@ -21,7 +21,7 @@ function displayCart() {
             <div id="empty">
                 <div class="empty-icon">🛒</div>
                 <p>Your cart is empty!</p>
-                <a href="Home/Home.html" class="shop-btn">Start Shopping</a>
+                <a href="../Home/Home.html" class="shop-btn">Start Shopping</a>
             </div>`;
         return;
     }

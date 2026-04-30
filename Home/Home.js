@@ -1,7 +1,7 @@
 // ─── AUTH GUARD ─────────────────────────────────────────────────────────────
 if (localStorage.getItem("isLoggedIn") !== "true") {
     alert("Please login first");
-    window.location.href = "Login/Login.html";
+    window.location.href = "../Login/Login.html";
 }
 
 // ─── CURRENCY CONSTANT (single source of truth) ──────────────────────────────
@@ -53,7 +53,7 @@ updateCartCount();
 function logout() {
     localStorage.removeItem("isLoggedIn");
     localStorage.removeItem("currentUser");
-    window.location.href = "Login/Login.html";
+    window.location.href = "../Login/Login.html";
 }
 
 // ─── FETCH PRODUCTS ───────────────────────────────────────────────────────────
@@ -119,5 +119,5 @@ document.getElementById("searchbar").addEventListener("input", function (event) 
 // ─── GO TO DETAILS PAGE ───────────────────────────────────────────────────────
 function details(productId) {
     localStorage.setItem("productId", productId);
-    window.location.href = "ViewDetails/viewDetails.html";
+    window.location.href = "../ViewDetails/viewDetails.html";
 }

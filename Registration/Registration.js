@@ -70,7 +70,7 @@ document.getElementById("formContainer").addEventListener("submit", function (e)
     localStorage.setItem("users", JSON.stringify(users));
 
     alert("Registration successful! Please login.");
-    window.location.href = "Login/Login.html";
+    window.location.href = "../Login/Login.html";
 });
 
 // Show/hide password toggle
