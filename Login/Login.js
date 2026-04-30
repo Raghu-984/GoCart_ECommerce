@@ -46,7 +46,7 @@ document.getElementById("loginContainer").addEventListener("submit", function (e
     if (validUser) {
         localStorage.setItem("isLoggedIn", "true");
         localStorage.setItem("currentUser", JSON.stringify(validUser));
-        window.location.href = "../Home/Home.html";
+        window.location.href = "Home/Home.html";
     } else {
         errorPassword.textContent = "Invalid email or password.";
     }
