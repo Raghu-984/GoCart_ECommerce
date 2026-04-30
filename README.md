@@ -22,6 +22,25 @@ This project focuses on frontend logic, local storage handling, and dynamic UI u
 
 ---
 
+## screenshots
+
+## Registration Page..
+![Registration](./screenshots/RegistrationPage.png)
+
+## Login Page..
+![Login](./screenshots/LoginPage.png)
+
+## Home Page...
+![Home](./screenshots/HomePage.png)
+
+## Details Page...
+
+![ViewDtails](./screenshots/DetailsPage.png)
+
+## Cart Page...
+
+![Cart](./screenshots/CartPage.png)
+
 ## 🛠️ Tech Stack
 
 * HTML
