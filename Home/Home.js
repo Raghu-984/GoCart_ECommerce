@@ -119,5 +119,5 @@ document.getElementById("searchbar").addEventListener("input", function (event) 
 // ─── GO TO DETAILS PAGE ───────────────────────────────────────────────────────
 function details(productId) {
     localStorage.setItem("productId", productId);
-    window.location.href = "../ViewDetails/viewDetails.html";
+    window.location.href = "../ViewDetails/ViewDetails.html"
 }
