@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GoCart - Register</title>
+    <link rel="stylesheet" href="./Registration.css">
+</head>
+<body>
+    <div id="registration">
+        <form id="formContainer">
+            <h2>Create an Account</h2>
+
+            <div class="form">
+                <label for="name">Name</label>
+                <input type="text" placeholder="Your full name" id="name">
+                <small id="errorName" class="error"></small>
+            </div>
+
+            <div class="form">
+                <label for="email">Email</label>
+                <input type="email" placeholder="example@gmail.com" id="email">
+                <small id="errorMail" class="error"></small>
+            </div>
+
+            <div class="form">
+                <label for="password">Password</label>
+                <div class="input-wrap">
+                    <input type="password" id="password" placeholder="Min. 6 characters">
+                    <span class="toggle-pass" onclick="togglePass('password', this)">👁️</span>
+                </div>
+                <small id="errorPass" class="error"></small>
+            </div>
+
+            <div class="form">
+                <label for="mobile">Mobile</label>
+                <input type="tel" id="mobile" placeholder="10-digit number">
+                <small id="errorMobile" class="error"></small>
+            </div>
+
+            <div class="form">
+                <button type="submit">Register</button>
+            </div>
+
+            <p>Already have an account? <a href="../Login/Login.html">Login</a></p>
+        </form>
+    </div>
+
+    <script src="./Registration.js"></script>
+</body>
+</html>

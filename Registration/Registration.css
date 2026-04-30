@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #f5f0ff 0%, #fff0f5 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#registration {
+    width: 420px;
+    background-color: white;
+    border-radius: 16px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+    padding: 40px 36px;
+}
+
+#registration form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+#registration form h2 {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #222;
+    margin-bottom: 4px;
+    text-align: center;
+}
+
+.form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.form label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #555;
+}
+
+.form input {
+    height: 42px;
+    border: 1.5px solid #ddd;
+    border-radius: 10px;
+    padding: 0 14px;
+    font-size: 14px;
+    background-color: #fafafa;
+    transition: border 0.2s, box-shadow 0.2s;
+    width: 100%;
+}
+
+.form input:focus {
+    outline: none;
+    border-color: blueviolet;
+    box-shadow: 0 0 0 3px rgba(138, 43, 226, 0.1);
+    background: white;
+}
+
+/* Password toggle wrapper */
+.input-wrap {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.input-wrap input {
+    padding-right: 42px;
+}
+
+.toggle-pass {
+    position: absolute;
+    right: 12px;
+    cursor: pointer;
+    font-size: 16px;
+    user-select: none;
+}
+
+.form button {
+    height: 44px;
+    width: 100%;
+    font-size: 1rem;
+    font-weight: 600;
+    background-color: blueviolet;
+    color: white;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.1s;
+    margin-top: 4px;
+}
+
+.form button:hover {
+    background-color: #5a00b5;
+    transform: translateY(-1px);
+}
+
+.form button:active {
+    transform: translateY(0);
+}
+
+#registration form p {
+    text-align: center;
+    font-size: 14px;
+    color: #666;
+}
+
+#registration form p a {
+    text-decoration: none;
+    color: blueviolet;
+    font-weight: 600;
+}
+
+#registration form p a:hover {
+    text-decoration: underline;
+}
+
+.error {
+    color: #e63946;
+    font-size: 12px;
+    min-height: 16px;
+}
+
+@media (max-width: 480px) {
+    #registration {
+        width: 92%;
+        padding: 30px 22px;
+    }
+}

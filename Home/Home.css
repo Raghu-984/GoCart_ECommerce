@@ -1,0 +1,563 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* ─── NAVBAR ─────────────────────────────────────────── */
+nav {
+    height: 72px;
+    width: 85%;
+    margin: 20px auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 18px;
+    gap: 15px;
+    padding: 0 28px;
+    border-radius: 35px;
+    border: 1px solid rgba(0,0,0,0.08);
+    box-shadow: 0px 4px 20px rgba(0,0,0,0.07);
+    background: white;
+    position: sticky;
+    top: 10px;
+    z-index: 100;
+    transition: box-shadow 0.3s ease;
+}
+
+nav:hover {
+    box-shadow: 0px 6px 25px rgba(0,0,0,0.12);
+}
+
+/* ─── LOGO ─────────────────────────────────────────── */
+#logo h1 {
+    font-size: 28px;
+    font-weight: 700;
+    color: #222;
+}
+
+#logo h1::first-letter {
+    color: orangered;
+}
+
+/* ─── NAV LINKS ─────────────────────────────────────────── */
+#navigation_Option {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+}
+
+#navigation_Option a {
+    text-decoration: none;
+    color: rgb(78, 75, 75);
+    font-weight: 600;
+    position: relative;
+    font-size: 16px;
+}
+
+.underLine::after {
+    content: "";
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 0%;
+    height: 3px;
+    background-color: blueviolet;
+    border-radius: 5px;
+    transition: width 0.4s ease;
+}
+
+.underLine:hover::after {
+    width: 100%;
+}
+
+.underLine:hover {
+    color: blueviolet;
+}
+
+/* ─── SEARCH BOX ─────────────────────────────────────────── */
+#search_box {
+    width: 280px;
+    height: 42px;
+    border: 1.5px solid #ddd;
+    display: flex;
+    border-radius: 25px;
+    overflow: hidden;
+    transition: box-shadow 0.3s;
+}
+
+#search_box input {
+    height: 100%;
+    width: 100%;
+    border: none;
+    outline: none;
+    padding-left: 18px;
+    border-radius: 25px 0 0 25px;
+    font-size: 15px;
+    background: transparent;
+}
+
+#search_box #search_logo {
+    height: 42px;
+    width: 46px;
+    min-width: 46px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: blueviolet;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+#search_box #search_logo:hover {
+    background-color: #5a00b5;
+}
+
+#search_box:focus-within {
+    border-color: blueviolet;
+    box-shadow: 0 4px 14px rgba(138, 43, 226, 0.2);
+}
+
+/* ─── RIGHT SIDE: CART + USER ─────────────────────────────────────────── */
+#nav_right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+/* ─── CART ─────────────────────────────────────────── */
+#cart a {
+    text-decoration: none;
+    color: #333;
+    font-size: 26px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    transition: color 0.2s;
+}
+
+#cart a:hover {
+    color: blueviolet;
+}
+
+#cartCount {
+    position: absolute;
+    top: -8px;
+    right: -10px;
+    background: orangered;
+    color: white;
+    font-size: 11px;
+    font-weight: 700;
+    height: 19px;
+    width: 19px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ─── USER MENU ─────────────────────────────────────────── */
+#userMenu {
+    position: relative;
+    cursor: pointer;
+}
+
+#userIcon {
+    font-size: 26px;
+    color: #444;
+    transition: color 0.2s;
+}
+
+#userIcon:hover {
+    color: blueviolet;
+}
+
+#userDropdown {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 40px;
+    background: white;
+    border: 1px solid #eee;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+    padding: 14px 18px;
+    min-width: 170px;
+    z-index: 200;
+}
+
+#userMenu:hover #userDropdown {
+    display: block;
+}
+
+#userDropdown p {
+    font-size: 13px;
+    font-weight: 600;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+#userDropdown hr {
+    border: none;
+    border-top: 1px solid #eee;
+    margin-bottom: 10px;
+}
+
+#userDropdown button {
+    width: 100%;
+    padding: 8px 12px;
+    background: #fff0f0;
+    color: red;
+    border: 1px solid #ffd5d5;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+#userDropdown button:hover {
+    background: #ffe0e0;
+}
+
+/* ─── HAMBURGER BUTTON ─────────────────────────────────────────── */
+#hamburgerBtn {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 6px;
+    border-radius: 8px;
+    transition: background 0.2s;
+    z-index: 300;
+}
+
+#hamburgerBtn:hover {
+    background: #f0f0f0;
+}
+
+#hamburgerBtn span {
+    display: block;
+    width: 26px;
+    height: 3px;
+    background: #333;
+    border-radius: 3px;
+    transition: all 0.35s cubic-bezier(0.23, 1, 0.32, 1);
+    transform-origin: center;
+}
+
+/* Animated X when active */
+#hamburgerBtn.active span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+#hamburgerBtn.active span:nth-child(2) {
+    opacity: 0;
+    transform: scaleX(0);
+}
+
+#hamburgerBtn.active span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+/* ─── MOBILE OVERLAY ─────────────────────────────────────────── */
+#mobileOverlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.4);
+    z-index: 150;
+    backdrop-filter: blur(2px);
+    animation: fadeIn 0.3s ease;
+}
+
+#mobileOverlay.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* ─── MOBILE SLIDE-IN MENU ─────────────────────────────────────────── */
+#mobileMenu {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: -320px;
+    width: 300px;
+    height: 100vh;
+    background: white;
+    z-index: 200;
+    padding: 30px 24px;
+    box-shadow: -8px 0 30px rgba(0,0,0,0.15);
+    transition: right 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+    flex-direction: column;
+}
+
+#mobileMenu.open {
+    right: 0;
+}
+
+#closeMenu {
+    position: absolute;
+    top: 18px;
+    right: 18px;
+    background: #f5f5f5;
+    border: none;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    cursor: pointer;
+    color: #555;
+    transition: background 0.2s;
+}
+
+#closeMenu:hover {
+    background: #ffe0e0;
+    color: red;
+}
+
+#mobileMenuContent {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+#mobileMenuContent a {
+    text-decoration: none;
+    color: #333;
+    font-size: 17px;
+    font-weight: 600;
+    padding: 13px 16px;
+    border-radius: 12px;
+    transition: background 0.2s, color 0.2s;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#mobileMenuContent a:hover {
+    background: #f3eeff;
+    color: blueviolet;
+}
+
+#mobileMenuContent hr {
+    border: none;
+    border-top: 1px solid #eee;
+    margin: 10px 0;
+}
+
+#mobileUser p {
+    font-size: 13px;
+    color: #888;
+    padding: 0 6px;
+    margin-bottom: 6px;
+    font-weight: 600;
+}
+
+#mobileLogout {
+    width: 100%;
+    padding: 12px 16px;
+    background: #fff0f0;
+    color: red;
+    border: 1px solid #ffd5d5;
+    border-radius: 12px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 6px;
+    transition: background 0.2s;
+}
+
+#mobileLogout:hover {
+    background: #ffe0e0;
+}
+
+/* ─── PRODUCT GRID ─────────────────────────────────────────── */
+#productContainer {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 30px 40px;
+}
+
+.product-card {
+    height: 430px;
+    width: 280px;
+    background-color: white;
+    border-radius: 16px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.product-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.14);
+}
+
+.product-card .image-wrap {
+    height: 220px;
+    width: 100%;
+    overflow: hidden;
+    background: #f9f9f9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.product-card img {
+    height: 200px;
+    width: 200px;
+    object-fit: contain;
+    transition: transform 0.4s ease;
+}
+
+.product-card:hover img {
+    transform: scale(1.08);
+}
+
+.product-card h3 {
+    padding: 10px 14px 4px;
+    font-size: 15px;
+    font-weight: 600;
+    color: #222;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.product-card .price {
+    padding: 2px 14px;
+    font-size: 16px;
+    font-weight: 700;
+    color: #e63946;
+}
+
+.product-card .meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 6px 14px;
+}
+
+.product-card .rating {
+    background: #d4edda;
+    color: #155724;
+    padding: 3px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.product-card .stock {
+    font-size: 12px;
+    color: #888;
+}
+
+.product-card button {
+    position: absolute;
+    bottom: 14px;
+    right: 14px;
+    background: blueviolet;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 20px;
+    border: none;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.1s;
+}
+
+.product-card button:hover {
+    background: #5a00b5;
+    transform: scale(1.04);
+}
+
+/* ─── LOADING / EMPTY STATES ─────────────────────────────────────────── */
+#loadingMsg {
+    width: 100%;
+    text-align: center;
+    padding: 60px;
+    font-size: 18px;
+    color: #888;
+}
+
+#noResults {
+    width: 100%;
+    text-align: center;
+    padding: 60px;
+    font-size: 18px;
+    color: #aaa;
+}
+
+/* ─── RESPONSIVE ─────────────────────────────────────────── */
+@media (max-width: 768px) {
+    nav {
+        width: 92%;
+        padding: 0 18px;
+    }
+
+    #navigation_Option,
+    #search_box,
+    #nav_right {
+        display: none;
+    }
+
+    #hamburgerBtn {
+        display: flex;
+    }
+
+    #mobileMenu {
+        display: flex;
+    }
+
+    #productContainer {
+        padding: 20px 16px;
+        gap: 14px;
+    }
+
+    .product-card {
+        width: 160px;
+        height: 320px;
+    }
+
+    .product-card .image-wrap {
+        height: 150px;
+    }
+
+    .product-card img {
+        height: 130px;
+        width: 130px;
+    }
+
+    .product-card h3 {
+        font-size: 13px;
+    }
+}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GoCart - Login</title>
+    <link rel="stylesheet" href="./Login.css">
+</head>
+<body>
+    <div id="loginPage">
+        <form id="loginContainer">
+            <h1>Welcome Back 👋</h1>
+            <p class="subtitle">Login to your GoCart account</p>
+
+            <div id="mail1">
+                <label for="email">Email</label>
+                <input type="email" placeholder="example@gmail.com" id="email">
+                <small id="errorEmail" class="error"></small>
+            </div>
+
+            <div id="pass">
+                <label for="password">Password</label>
+                <div class="input-wrap">
+                    <input type="password" id="password" placeholder="Enter your password">
+                    <span class="toggle-pass" onclick="togglePass()">👁️</span>
+                </div>
+                <small id="errorPassword" class="error"></small>
+            </div>
+
+            <button type="submit">Login</button>
+
+            <p>Don't have an account? <a href="../Registration/Registration.html">Register</a></p>
+        </form>
+    </div>
+
+    <script src="./Login.js"></script>
+</body>
+</html>
